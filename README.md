@@ -6,6 +6,12 @@
   <a href="https://docs.mongodb.com/ecosystem/drivers/go/"><img src="etc/assets/docs-mongodb-green.svg"></a>
 </p>
 
+# Add by wudaijun
+
+原 driver 的 UpdateOne 和 UpdateMany 操作只支持基于'$'操作符的修改，如`$set`，而不支持对整个 Doc 的无条件覆盖。
+
+因此注释掉了 mongo/collection.go:534 中对 '$' 的检查，即可支持文档覆盖。
+
 # MongoDB Go Driver
 
 The MongoDB supported driver for Go.

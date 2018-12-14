@@ -530,9 +530,11 @@ func (coll *Collection) UpdateOne(ctx context.Context, filter interface{}, updat
 		return nil, err
 	}
 
+	/*
 	if err := ensureDollarKey(u); err != nil {
 		return nil, err
 	}
+	*/
 
 	sess := sessionFromContext(ctx)
 
